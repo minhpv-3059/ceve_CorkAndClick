@@ -70,6 +70,7 @@ public class ToDtoMappers {
                 order.getAddress(),
                 order.getPhoneNumber(),
                 order.getStatus().name(),
+                order.getRejectReason(),
                 order.getTotalAmount(),
                 order.getCreatedAt(),
                 itemResponses
@@ -82,6 +83,25 @@ public class ToDtoMappers {
                 order.getTotalAmount(),
                 order.getStatus().name(),
                 order.getCreatedAt()
+        );
+    }
+
+    public static ImportTaskResponse toImportTaskResponse(ImportTask task) {
+        return new ImportTaskResponse(
+                task.getId(),
+                task.getFileName(),
+                task.getStatus().name(),
+                task.getErrorMessage(),
+                task.getStartedAt(),
+                task.getFinishedAt()
+        );
+    }
+
+    public static MessageResponse toMessageResponse(Message message) {
+        return new MessageResponse(
+                message.getSenderRole(),
+                message.getContent(),
+                message.getTimestamp()
         );
     }
 }

@@ -29,9 +29,12 @@ public class SecurityConfig {
 
     private static final String ROLE = "ROLE_";
 
-    private final String[] PUBLIC_ENDPOINTS = {FULL_REGISTER, FULL_LOGIN, FULL_LOGOUT, FULL_VERIFY_TOKEN,
+    private final String[] PUBLIC_ENDPOINTS = {FULL_REGISTER, FULL_LOGIN, FULL_LOGOUT, FULL_VERIFY_TOKEN, FULL_ACTIVATE,
             ProductApiPaths.BASE_ALL,
-            CategoryApiPaths.BASE};
+            CategoryApiPaths.BASE,
+            "/chat.html",
+            "/ws/chat/**",
+            "/favicon.ico"};
 
     private final MessageUtil messageUtil;
     private final CustomJwtDecoder jwtDecoder;

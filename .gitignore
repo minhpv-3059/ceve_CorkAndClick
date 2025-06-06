@@ -29,6 +29,9 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 /src/main/resources/application.properties
+src/main/resources/app-security-config.properties
+src/.DS_Store
+src/main/.DS_Store
 
 ### STS ###
 .apt_generated

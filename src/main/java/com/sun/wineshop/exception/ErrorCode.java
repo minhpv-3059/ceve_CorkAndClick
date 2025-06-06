@@ -19,9 +19,11 @@ public enum ErrorCode {
     ACCESS_DENIED(403, "error.access.denied"),
     UNAUTHORIZED(401, "error.unauthorized"),
     INVALID_TOKEN(401, "error.invalid.token"),
+    INVALID_VERIFICATION_TOKEN(401, "error.invalid.verification.token"),
     CART_EMPTY(404, "error.cart.empty"),
     ORDER_NOT_FOUND(404, "error.order.not.found"),
     ORDER_CANNOT_BE_CANCELLED(400, "order.not.cancelled"),
+    ORDER_REJECT_REASON_REQUIRED(400, "error.order.reject.reason.required"),
 
     // Category
     CATEGORY_NAME_INVALID(40200, "error.category.name.invalid"),
@@ -47,6 +49,12 @@ public enum ErrorCode {
     // Review
     REVIEW_NOT_ALLOWED(40500, "error.review.not.allowed"),
     REVIEW_ALREADY_EXISTS(40501, "error.review.already.exists"),
+
+    // Poi
+    EXCEL_IMPORT_FAIL(500, "file.import.fail"),
+    EXCEL_EXPORT_FAIL(500, "file.export.fail"),
+    EXCEL_IMPORT_FILE_EMPTY(40600, "file.empty"),
+    TASK_NOT_FOUND(404, "error.task.not.found"),
     ;
 
     private final int code;
